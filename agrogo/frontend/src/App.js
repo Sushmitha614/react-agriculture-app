@@ -12,31 +12,23 @@ import { setDataProduct } from "./redux/ProductSlide";
 import { useDispatch, useSelector } from "react-redux";
 import Cart from './page/Cart';
 import { Toaster } from 'react-hot-toast';
-
 import Login1 from './home/Login';
-
 import HomePage from './home/HomePage';
 import Register from './home/Register';
+import Advisory from './home/Advisory';
+import CropCalendar from'./components/cropcalendar/cropApp';
+
+import Store from './page/Store';
+import Seller from './components/page/Store/StoreCom/Seller';
+import Inorganic from'./components/page/Store/InorganicProducts'; 
+
+import Contact from './page/Contact';
+import Products from './components/Products';
+
 
 import Dashboard from './components/dashboard/Dashboard';
 import AdminDashboard from './components/dashboard/AdminDashboard';
 import Profile from "./components/dashboard/Profile";
-
-
-
- import Store from './components/page/Store';
- import Seller from './components/page/Store/StoreCom/Seller';
-
-
-import CropCalendar from './components/cropcalendar/cropApp';
-import Contact from './page/Contact';
-import Products from './components/Products';
-
-// import Store from './components/page/Store';
-// import Seller from './components/page/Store/StoreCom/Seller';
-//import Inorganic from'./components/page/Store/InorganicProducts'; 
-
-
 
 
 function App() {
@@ -81,6 +73,17 @@ function App() {
       <Route path = "/register" element = {<Register/>}/>
       <Route path = '/login' element = {<Login1/>}/> */}
       
+
+      {<Route path = '/login' element = {<Login/>}/> }
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/Store" element={<Store />} />
+      <Route path="/Seller" element={<Seller />} />
+      <Route path="/cropcalendar" element={<CropCalendar/>}/>
+      <Route path="/Inorganic" element={<Inorganic />} />
+      {/* <Route path="/Store" element={<Store />} />
+      <Route path="/Seller" element={<Seller />} />
+       */}
+
       
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/admindashboard" element={<AdminDashboard />} />
@@ -94,10 +97,12 @@ function App() {
 
       <Route path="/cropcalendar" element={<CropCalendar/>}/>
 
+      <Route path="/advisory" element={<Advisory />} />
 
       <Route path="/Store" element={<Store />} />
       <Route path="/Seller" element={<Seller />} />
      {/* <Route path="/Inorganic" element={<Inorganic />} /> */}
+
 
 
       </Routes>

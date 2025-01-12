@@ -1,8 +1,24 @@
 /* Seller.css */
 
+body { 
+    /*background-image: url('./Img/Vietnam\ Wallpaper.jpeg');*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top left; 
+    background-size: 100% 100%;
+  }
+
+
+.seller-form {
+    
+    width: 50%; /* Maximum width of the form */
+    height: 50%;
+
+}
 .seller-form {
     max-width: 1600px; /* Maximum width of the form */
     height: 1000px;
+
     margin: 20px auto; /* Center the form */
     padding: 20px; /* Padding inside the form */
     border: 1px solid #ccc; /* Light border */

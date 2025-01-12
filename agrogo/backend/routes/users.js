@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 
 
 router.post('/', async (req, res) => {
-    const { firstname,lastname,username, email, mobile, region, nic,role, password, education, occupation, experience } = req.body;
+    const { firstname,lastname,username, email, mobile,gender, region, nic,role, password, education, occupation, experience } = req.body;
     
     if (mobile.length !== 10) {
       return res.status(400).json({ message: 'Mobile number must be 10 digits long' });
@@ -29,6 +29,7 @@ router.post('/', async (req, res) => {
         lastname,
         username,
         email,
+        gender,
         mobile,
         region,
         nic,
@@ -94,5 +95,15 @@ router.post('/', async (req, res) => {
         res.status(500).json({ message: 'Server error', error: err.message });
       }
     });
+
+    router.get('/aeos', async (req, res) => {
+      try {
+        const aeos = await User.find({ role: "Agricultural Executive Officer" });
+        res.json(aeos);
+      } catch (error) {
+        res.status(500).json({ message: "Error fetching AEOs" });
+      }
+    });
+    
     
 module.exports = router;
