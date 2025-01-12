@@ -5,7 +5,6 @@ export const navItems = [
   { label: "Farm Management Tools", href: "/Store" },
   { label: "Farm Supply MarketPlace", href: "/ecom/home" },
   { label: "Crop Calender", href: "/cropcalendar" },
-  { label: "ChatBot", href: "#" },
   { label: "Add Product", href: "/ecom/newproduct", roles: ["farmer"] },
  
 ];
